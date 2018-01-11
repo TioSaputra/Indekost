@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LBSKosan</string>
+    <string name="app_name">IndeKost</string>
     <string name="bottom_nav_beranda">Beranda</string>
     <string name="bottom_nav_peta">Peta</string>
     <string name="bottom_nav_profil">Profil</string>
@@ -16,4 +16,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_utama">UtamaActivity</string>
 </resources>

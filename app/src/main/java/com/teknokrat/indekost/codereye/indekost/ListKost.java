@@ -28,12 +28,12 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.teknokrat.indekost.codereye.indekost.model.Kosts;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import codereye.tio.kos.cari.google.com.lbskosan.model.Kosts;
 
 /**
  * Created by tio on 1/3/18.
