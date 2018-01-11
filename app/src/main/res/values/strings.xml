@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LBSKosan</string>
+    <string name="bottom_nav_beranda">Beranda</string>
+    <string name="bottom_nav_peta">Peta</string>
+    <string name="bottom_nav_profil">Profil</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="Nama_Kosan">WIJAYA RESIDENCE DEKAT UTI,
+        TERSEDIA KAMAR, 700K IDR/BULAN hp : 08127907864 </string>
+
+
+    <string name="first_beranda_navigation_button">DAFTAR</string>
+    <string name="second_beranda_navigation_button">PETA</string>
+    <string name="deskripsi_kosan">Lokasi Sangat Strategis, dekat area kampus, Klinik Kedaton, Mall Bumi Kedaton, Dekat Alfamart, ATM, warung makan, kantor pos.</string>
+    <string name="title_activity_bottom_navigasi">BottomNavigasi</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_maps2">Map</string>
+</resources>

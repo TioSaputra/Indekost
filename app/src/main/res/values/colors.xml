@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00AA8D</color>
+    <color name="colorPrimaryDark">#008975</color>
+    <color name="colorPrimaryLight">#00BF9A</color>
+    <color name="colorSecondary">#d32f2f</color>
+    <color name="colorSecondaryDark">#9a0007</color>
+    <color name="colorSecondaryLight">#ff6659</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="white_trans">#E0E0E0</color>
+    <color name="colorPrimarylime">#c6ff00 </color>
+    <color name="colorPrimarylimeDark">#90cc00 </color>
+    <color name="colorSecondaryLime">#eeff41</color>
+    <color name="colorOnText">#FFFFFF</color>
+    <color name="colorGreenLightSecondary">#76ff03</color>
+    <color name="colorGreenLightSecondaryDark">#32cb00</color>
+    <color name="colorGreenLightSecondaryLight">#b0ff57</color>
+
+
+</resources>

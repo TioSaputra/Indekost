@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "694442752378",
+    "firebase_url": "https://indekost-d3487.firebaseio.com",
+    "project_id": "indekost-d3487",
+    "storage_bucket": "indekost-d3487.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694442752378:android:c1d2ac31de8801d3",
+        "android_client_info": {
+          "package_name": "com.teknokrat.indekost.codereye.indekost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694442752378-6daj6pl5du2qj2atg1eni36maq9svkfd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teknokrat.indekost.codereye.indekost",
+            "certificate_hash": "fdaa4610562356bdcd3229f22ea2611abc7edcf0"
+          }
+        },
+        {
+          "client_id": "694442752378-3miktdn3aiogu88cepf6de994doadibn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyXDzy1xvEjA35VWqjbTuFsG1AxEZoRi4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694442752378-3miktdn3aiogu88cepf6de994doadibn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
