@@ -15,8 +15,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <ImageView
-                android:id="@+id/img_kosan"
                 android:layout_width="match_parent"
                 android:layout_height="205dp"
                 android:background="@drawable/rumah_contoh"/>
@@ -35,9 +35,7 @@
                     android:textColor="@color/colorwhite"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="7dp"/>
-
             </LinearLayout>
-
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cardView"
@@ -58,37 +56,69 @@
                         android:text="@string/Nama_Kosan"
                         android:textSize="18dp"
                         android:layout_margin="5dp"
-                        android:textColor="@color/colorOnText"/>
+                        android:textColor="@color/colorBlack"/>
 
-                    <RelativeLayout
+                    <LinearLayout
+                        android:id="@+id/Update"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/textview_updateTerakhir"
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Update Terakhir :"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="6dp"/>
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/textview_updateTerakhir_isi"
-                            android:layout_width="match_parent"
+                            <TextView
+                                android:id="@+id/textview_updateTerakhir"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Update Terakhir :"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="6dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tgl_update"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignLeft="@+id/textview_updateTerakhir"
-                            android:layout_marginStart="105dp"
-                            android:text="1 Januari 2018" />
+                            android:layout_weight="2"
+                            android:orientation="vertical">
 
-                    </RelativeLayout>
+                            <TextView
+                                android:id="@+id/textview_updateTerakhir_isi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="1 Januari 2018" />
+                        </LinearLayout>
 
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textview_LokasiKosan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LOKASI KOS  "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginLeft="6dp"/>
+
+                    <View android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#bbb"
+                        android:layout_margin="6dp"/>
 
                     <!--Data Tentang Tempat-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <!--Provinsi -->
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -96,11 +126,14 @@
                             android:orientation="horizontal"
                             android:layout_marginBottom="5dp">
                             <TextView
+                                android:id="@+id/tv_provinsi"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Provinsi\t\t\t:"/>
+                                android:layout_marginLeft="6dp"
+                                android:text="Provinsi\t\t\t\t\t:"/>
                             <TextView
+                                android:id="@+id/tv_provinsi_isi"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="3"
@@ -114,11 +147,14 @@
                             android:orientation="horizontal"
                             android:layout_marginBottom="5dp">
                             <TextView
+                                android:id="@+id/tv_kota"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Kota\t\t\t\t\t\t:"/>
+                                android:layout_marginLeft="6dp"
+                                android:text="Kota\t\t\t\t\t\t\t:"/>
                             <TextView
+                                android:id="@+id/tv_kota_isi"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="3"
@@ -132,11 +168,14 @@
                             android:orientation="horizontal"
                             android:layout_marginBottom="5dp">
                             <TextView
+                                android:id="@+id/tv_kecamatan"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:layout_marginLeft="6dp"
                                 android:text="Kecamatan\t:"/>
                             <TextView
+                                android:id="@+id/tv_kecamatan_isi"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="3"
@@ -150,168 +189,461 @@
                             android:orientation="horizontal"
                             android:layout_marginBottom="5dp">
                             <TextView
+                                android:id="@+id/tv_alamat"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Alamat\t\t\t\t:"/>
+                                android:layout_marginLeft="6dp"
+                                android:text="Alamat\t\t\t\t\t:"/>
                             <TextView
+                                android:id="@+id/tv_alamat_isi"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="3"
                                 android:text="Jl. Keramat, No 31, Labuhan Ratu, Bandar Lampung"/>
                         </LinearLayout>
-                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/textview_LokasiKosan"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="LOKASI KOS  "
-                        android:textColor="@color/colorOnText"
-                        android:textSize="16dp"
-                        android:layout_marginTop="27dp"
-                        android:layout_marginLeft="6dp"/>
-
-                    <View android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#bbb"
-                        android:layout_margin="6dp"/>
-
-                    <TextView
-                        android:id="@+id/textview_Type_kost"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TYPE KOS  "
-                        android:textColor="@color/colorOnText"
-                        android:layout_marginTop="19dp"
-                        android:textSize="16dp"
-                        android:layout_marginLeft="6dp"/>
-
-                    <View android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#bbb"
-                        android:layout_margin="6dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/textview_JenisKos"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Jenis Kos\t\t\t\t\t\t\t\t\t:"
-                                android:layout_marginLeft="5dp"
-                                android:textSize="13dp"/>
-
-                            <TextView
-                                android:id="@+id/textview_UmurBangunan"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Umur Bangunan\t\t\t:"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="5dp"
-                                android:textSize="13dp"/>
-
-                            <TextView
-                                android:id="@+id/textview_Jambertamu"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Jam Bertamu\t\t\t\t\t\t:"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="5dp"
-                                android:textSize="13dp"/>
-
-                            <TextView
-                                android:id="@+id/textview_Pelbinatang"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:text="Pelihara Binatang\t\t:"
-                                android:layout_marginLeft="5dp"
-                                android:textSize="13dp"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/textview_jeniskos_isi"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Campur"
-                                android:textSize="13dp"/>
-
-                            <TextView
-                                android:id="@+id/textview_UmurBangunan_isi"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:text="Baru"
-                                android:textSize="13dp"/>
-
-                            <TextView
-                                android:id="@+id/textview_Jambertamu_isi"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Dibatasi"
-                                android:layout_marginTop="5dp"
-                                android:textSize="13dp"/>
-
-                            <TextView
-                                android:id="@+id/textview_Pelbinatang_isi"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Tidak"
-                                android:layout_marginTop="5dp"
-                                android:textSize="13dp"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/textview_Deskripsi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="DESKRIPSI"
-                        android:textColor="@color/colorOnText"
-                        android:textSize="16dp"
-                        android:layout_marginTop="19dp"
-                        android:layout_marginLeft="6dp"/>
-
-                    <View android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#bbb"
-                        android:layout_margin="6dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/deskripsi_kosan"
+                            android:id="@+id/textview_Type_kost"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="6dp"
-                            android:text="@string/deskripsi_kosan"/>
-                    </LinearLayout>
+                            android:text="TYPE KOS  "
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="19dp"
+                            android:textSize="16dp"
+                            android:layout_marginLeft="6dp"/>
 
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#bbb"
+                            android:layout_margin="6dp"/>
+
+                        <!--Data Tentang Type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--Jenis Kos -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="5dp">
+                                <TextView
+                                    android:id="@+id/tv_Jenis_kos"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="6dp"
+                                    android:text="Jenis Kos\t\t\t\t\t\t\t\t\t:"/>
+                                <TextView
+                                    android:id="@+id/tv_Jenis_kos_isi"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:text="Putra"/>
+                            </LinearLayout>
+
+                            <!--Umur Bangunan-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="5dp">
+                                <TextView
+                                    android:id="@+id/tv_umurbangunan"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="6dp"
+                                    android:text="Umur Bangunan\t\t\t:"/>
+                                <TextView
+                                    android:id="@+id/tv_umurbangunan_isi"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:text="Baru"/>
+                            </LinearLayout>
+
+                            <!--Jam Bertamu-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="5dp">
+                                <TextView
+                                    android:id="@+id/tv_jambertamu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="6dp"
+                                    android:text="Jam Bertamu\t\t\t\t\t\t:"/>
+                                <TextView
+                                    android:id="@+id/tv_jambertamu_isi"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:text="Dibatasi"/>
+                            </LinearLayout>
+
+                            <!--Pelihara Binatang-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="5dp">
+                                <TextView
+                                    android:id="@+id/tv_pelbinatang"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="6dp"
+                                    android:text="Pelihara Binatang\t\t\:"/>
+                                <TextView
+                                    android:id="@+id/tv_pilbinatang_isi"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:text="Tidak"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textview_Deskripsi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="DESKRIPSI"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16dp"
+                                android:layout_marginTop="19dp"
+                                android:layout_marginLeft="6dp"/>
+
+                            <View android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#bbb"
+                                android:layout_margin="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/deskripsi_kosan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="6dp"
+                                    android:text="@string/deskripsi_kosan"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textview_Fasilitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="FASILITAS BANGUNAN"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginLeft="6dp"/>
+
+                            <View android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#bbb"
+                                android:layout_margin="6dp"/>
+
+                            <LinearLayout
+                                android:id="@+id/fasilitasBangunan_kiri"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="Keamanan 24 Jam"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="Dapur Bersama"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="Parkiran Motor"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="Parkiran Mobil"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="TV"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/fasilitasBangunan_kanan"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.05"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan6"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="AC"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="Cleaning Service"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_border_textview">
+
+                                        <TextView
+                                            android:id="@+id/fasilitasBangunan8"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="CCTV"
+                                            android:layout_marginTop="4dp"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/textview_Fasilitas_Sekitar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="FASILITAS SEKITAR"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16dp"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginLeft="6dp"/>
+
+                        <View android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#bbb"
+                            android:layout_margin="6dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/fasilitasSekitar_kiri"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="170dp"
+                                    android:layout_height="30dp"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rounded_border_textview">
+
+                                    <TextView
+                                        android:id="@+id/fasilitasSekitar1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="ATM"
+                                        android:layout_marginTop="4dp"/>
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/fasilitasSekitar_kanan"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.05"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="170dp"
+                                    android:layout_height="30dp"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rounded_border_textview">
+
+                                    <TextView
+                                        android:id="@+id/fasilitasSekitar_6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Kampus"
+                                        android:layout_marginTop="4dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textview_Peta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PETA"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16dp"
+                                android:layout_marginTop="27dp"
+                                android:layout_marginLeft="6dp"/>
+
+                            <View android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#bbb"
+                                android:layout_margin="6dp"/>
+
+                            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:tools="http://schemas.android.com/tools"
+                                android:layout_width="match_parent"
+                                android:layout_height="205dp">
+
+                                <com.google.android.gms.maps.MapView
+                                    android:id="@+id/map_detail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="205dp"
+                                    android:layout_margin="6dp"/>
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
@@ -325,393 +657,8 @@
             </android.support.v7.widget.CardView>
 
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="false">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textview_Fasilitas"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="FASILITAS BANGUNAN"
-                        android:textColor="@color/colorOnText"
-                        android:textSize="16dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginLeft="6dp"/>
-
-                    <View android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#bbb"
-                        android:layout_margin="6dp"/>
-
-                    <LinearLayout
-                        android:id="@+id/fasilitasBangunan_kiri"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan1"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="Keamanan 24 Jam"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="Dapur Bersama"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan3"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="Parkiran Motor"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan4"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="Parkiran Mobil"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan5"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="TV"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/fasilitasBangunan_kanan"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1.05"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan6"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="AC"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan7"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="Cleaning Service"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasBangunan8"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="CCTV"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textview_Fasilitas_Sekitar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="FASILITAS SEKITAR"
-                        android:textColor="@color/colorOnText"
-                        android:textSize="16dp"
-                        android:layout_marginTop="27dp"
-                        android:layout_marginLeft="6dp"/>
-
-                    <View android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#bbb"
-                        android:layout_margin="6dp"/>
-
-                    <LinearLayout
-                        android:id="@+id/fasilitasSekitar_kiri"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasSekitar1"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="ATM"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/fasilitasSekitar_kanan"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1.05"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/rounded_border_textview">
-
-                                <TextView
-                                    android:id="@+id/fasilitasSekitar_6"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="Kampus"
-                                    android:layout_marginTop="4dp"/>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textview_Peta"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="PETA"
-                            android:textColor="@color/colorOnText"
-                            android:textSize="16dp"
-                            android:layout_marginTop="27dp"
-                            android:layout_marginLeft="6dp"/>
-
-                        <View android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#bbb"
-                            android:layout_margin="6dp"/>
-
-                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                            xmlns:tools="http://schemas.android.com/tools"
-                            android:layout_width="match_parent"
-                            android:layout_height="205dp">
-
-                            <com.google.android.gms.maps.MapView
-                                android:id="@+id/map_detail"
-                                android:layout_width="match_parent"
-                                android:layout_height="205dp"
-                                android:layout_margin="6dp"/>
-
-                            </FrameLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
-
-                </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="false">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textview_Kost"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="KOST MENARIK LAINNYA"
-                android:textColor="@color/colorOnText"
-                android:textSize="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginLeft="6dp"/>
-
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#bbb"
-                android:layout_margin="6dp"/>
-
-                <ListView
-                    android:id="@+id/list_kosan"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </ListView>
-
-
-            </LinearLayout>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-
-        </android.support.v7.widget.CardView>
-
 
         </LinearLayout>
-
-
 
 
     </ScrollView>
@@ -734,7 +681,6 @@
             android:textColor="@color/colorwhite"
             android:textSize="19dp"/>
     </RelativeLayout>
-
 
 
 
