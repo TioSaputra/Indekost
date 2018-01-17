@@ -2,8 +2,10 @@ package com.teknokrat.indekost.codereye.indekost;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -28,6 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 import com.teknokrat.indekost.codereye.indekost.model.Kosts;
 
 import java.io.File;
@@ -72,6 +75,7 @@ public class ListKost extends Fragment implements AdapterView.OnItemClickListene
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent i = new Intent(getActivity(), DetailActivity.class);
+        i.putExtra("object", kostsList.get(position));
         startActivity(i);
     }
 
@@ -124,28 +128,7 @@ public class ListKost extends Fragment implements AdapterView.OnItemClickListene
 
         try {
             for(int i = 0; i<kostsList.size(); i++) {
-                fileName = kostsList.get(i).getGambar().toString();
-                fullName = fileName + fileType;
-                StorageReference riversRef = mStorageRef.child(fullName);
-                localFile = File.createTempFile(fileName, fileType);
-                path.add(localFile.getAbsolutePath());
 
-
-                riversRef.getFile(localFile)
-                        .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                            @Override
-                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                                // Successfully downloaded data to local file
-                                // ...
-                                System.out.println("Successfully downloaded data to local file");
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        // Handle failed download
-                        // ...
-                    }
-                });
             }
             fillFoodList();
         }catch (Exception e){
@@ -179,9 +162,7 @@ public class ListKost extends Fragment implements AdapterView.OnItemClickListene
             TextView txtNama = (TextView) view.findViewById(R.id.list_item_nama);
             TextView txtAlamat = (TextView) view.findViewById(R.id.list_item_alamat);
 
-            Bitmap bitmap = BitmapFactory.decodeFile(path.get(i));
-            vwGambar.setImageBitmap(bitmap);
-
+            Picasso.with(getContext()).load("https://firebasestorage.googleapis.com/v0/b/indekost-d3487.appspot.com/o/" + kostsList.get(i).getGambar() + ".jpg?alt=media&token=7ed9a494-186f-49bb-b52f-c4f690026fd5").into(vwGambar);
             txtNama.setText(kostsList.get(i).getNama());
             txtAlamat.setText(kostsList.get(i).getNama());
 

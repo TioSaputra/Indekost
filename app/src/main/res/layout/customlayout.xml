@@ -11,7 +11,8 @@
         android:layout_height="150dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rumah_contoh"/>
 
     <TextView
         android:id="@+id/tv_nama"
@@ -19,7 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/imgv"
         android:layout_toRightOf="@id/imgv"
-        android:text=""
         android:textSize="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
@@ -32,7 +32,6 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/imgv"
         android:layout_toRightOf="@id/imgv"
-        android:text=""
         android:maxLines="2"
         android:textSize="15dp"
         android:layout_marginRight="10dp"/>

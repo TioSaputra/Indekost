@@ -39,24 +39,29 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setupBottomNavigation(){
-        BottomNavigationView btmNav = (BottomNavigationView)
+        final BottomNavigationView btmNav = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
 
         btmNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemToSelect = 0;
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 switch (item.getItemId()){
                     case R.id.home_page:
                         transaction.replace(R.id.fragment_container, listFragment);
+                        itemToSelect = 0;
                         break;
                     case R.id.map_page:
                         transaction.replace(R.id.fragment_container, mapsFragment);
+                        itemToSelect = 1;
                         break;
                     case R.id.profil_page:
                         transaction.replace(R.id.fragment_container, profileActivityFragment);
+                        itemToSelect = 2;
                         break;
                 }
+                btmNav.getMenu().getItem(itemToSelect).setChecked(true);
                 transaction.commit();
                 return false;
             }

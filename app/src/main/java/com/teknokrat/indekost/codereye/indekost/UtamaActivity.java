@@ -22,13 +22,13 @@ public class UtamaActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.home_page:
                     transaction.replace(R.id.content_utama, listFragment);
                     break;
-                case R.id.navigation_dashboard:
+                case R.id.map_page:
                     transaction.replace(R.id.content_utama, mapsFragment);
                     break;
-                case R.id.navigation_notifications:
+                case R.id.profil_page:
                     transaction.replace(R.id.content_utama, profileActivityFragment);
                     break;
             }

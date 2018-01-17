@@ -17,6 +17,7 @@
 
 
             <ImageView
+                android:id="@+id/vwGambarKost"
                 android:layout_width="match_parent"
                 android:layout_height="205dp"
                 android:background="@drawable/rumah_contoh"/>
@@ -27,7 +28,7 @@
                 android:background="@color/colorSecondaryDark">
 
                 <TextView
-                    android:id="@+id/textview_harga"
+                    android:id="@+id/tvHargaKost"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Rp. 700.000/bulan"
@@ -50,7 +51,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/texview_namaKosan"
+                        android:id="@+id/tvNamaKost"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Nama_Kosan"
@@ -175,7 +176,7 @@
                                 android:layout_marginLeft="6dp"
                                 android:text="Kecamatan\t:"/>
                             <TextView
-                                android:id="@+id/tv_kecamatan_isi"
+                                android:id="@+id/tvKecamatan"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="3"
@@ -196,7 +197,7 @@
                                 android:layout_marginLeft="6dp"
                                 android:text="Alamat\t\t\t\t\t:"/>
                             <TextView
-                                android:id="@+id/tv_alamat_isi"
+                                android:id="@+id/tvAlamat"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="3"
@@ -240,7 +241,7 @@
                                     android:layout_marginLeft="6dp"
                                     android:text="Jenis Kos\t\t\t\t\t\t\t\t\t:"/>
                                 <TextView
-                                    android:id="@+id/tv_Jenis_kos_isi"
+                                    android:id="@+id/tvJenisKost"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="3"
@@ -331,7 +332,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/deskripsi_kosan"
+                                    android:id="@+id/tvDeskripsi"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="6dp"
@@ -668,8 +669,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/colorGreenLightSecondaryDark"
-        android:layout_alignParentBottom="true"
-        android:onClick="Hubungi">
+        android:layout_alignParentBottom="true">
 
         <TextView
             android:id="@+id/textview_hubungikost"
